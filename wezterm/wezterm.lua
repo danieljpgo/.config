@@ -6,24 +6,23 @@ config = {
   -- performance
   front_end = "WebGpu",
   max_fps = 144,
-  animation_fps = 10,
-
-  enable_tab_bar = false,
+  default_cursor_style = "SteadyBar",
 
   -- theme
   color_scheme = "Poimandres Alternate",
-  color_scheme_dirs = { '~/.config/wezterm/theme/poimandres.toml' },
+  color_scheme_dirs = { '~/.config/wezterm/theme/poimandres-alternate.toml' },
 
   -- appearance
+  enable_tab_bar = false,
   window_close_confirmation = "NeverPrompt",
   window_decorations = "RESIZE|MACOS_FORCE_ENABLE_SHADOW",
-  window_background_opacity = 0.60,
-  window_padding = { left = 16, right = 16, top = 16, bottom = 16 },
+  window_background_opacity = 0.4,
+  window_padding = { left = 12, right = 12, top = 12, bottom = 12 },
   macos_window_background_blur = 30,
 
   -- font
-  font_size = 16,
-  font = wezterm.font("MesloLGS Nerd Font Mono"),
+  font_size = 14,
+  font = wezterm.font("JetBrainsMono Nerd Font Mono"),
   freetype_load_flags = 'NO_HINTING',
   freetype_load_target = 'Light',
 
@@ -63,4 +62,6 @@ config = {
 
 return config
 
--- default_cursor_style
+-- animation_fps = 24,
+-- default_cursor_style = "SteadyBlock",
+-- font = wezterm.font("MesloLGS Nerd Font Mono"),
